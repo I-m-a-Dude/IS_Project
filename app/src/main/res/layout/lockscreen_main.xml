@@ -23,8 +23,21 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpUsage" />
         <androidx.constraintlayout.widget.Guideline android:id="@+id/guideline4" android:layout_width="wrap_content" android:orientation="horizontal" app:layout_constraintGuide_percent="0.30" android:layout_height="0dp"/>
-        <com.google.android.material.card.MaterialCardView android:id="@+id/cardView" style="@style/custom_card_view_style" android:layout_width="match_parent" android:layout_height="0dp" app:cardBackgroundColor="@color/black" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="@+id/guideline4">
-            <androidx.constraintlayout.widget.ConstraintLayout style="@style/custom_card_view_style" android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            style="@style/custom_card_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:theme="@style/custom_card_view_style"
+            app:cardBackgroundColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/custom_card_view_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/edit_email"
@@ -38,15 +51,31 @@
                     android:drawableStart="@drawable/baseline_account_circle_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:textColorHint="@android:color/white"
                     android:hint="@string/email_or_username"
+                    android:textColorHint="@android:color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="VisualLintTextFieldSize"
-                    />
-                <EditText android:id="@+id/edit_Password" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginStart="15dp" android:layout_marginTop="36dp" android:layout_marginEnd="15dp" android:background="@drawable/edit_text_background" android:drawableStart="@drawable/baseline_lock_open_24" android:drawablePadding="8dp" android:ems="10" android:hint="Password" android:inputType="textPassword" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/edit_email" android:textColorHint="@android:color/white"
+                    tools:ignore="VisualLintTextFieldSize" />
+
+                <EditText
+                    android:id="@+id/edit_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="15dp"
                     android:autofillHints=""
+                    android:background="@drawable/edit_text_background"
+                    android:drawableStart="@drawable/baseline_lock_open_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_email"
                     tools:ignore="HardcodedText,VisualLintTextFieldSize" />
 
                 <Button
@@ -72,7 +101,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/optiuni"
                     tools:ignore="TextContrastCheck" />
-                <TextView android:id="@+id/optiuni" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:fontFamily="sans-serif-light" android:textColor="@color/white_pearl" android:text="Or if you don't have an account" android:textSize="18dp" android:textStyle="bold|italic" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/signin"
+
+                <TextView
+                    android:id="@+id/optiuni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Or if you don't have an account"
+                    android:textColor="@color/white_pearl"
+                    android:textSize="18dp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signin"
                     tools:ignore="SpUsage" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>

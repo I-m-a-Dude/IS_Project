@@ -39,7 +39,12 @@
 
         <androidx.constraintlayout.widget.Guideline android:id="@+id/guideline4" android:layout_width="wrap_content" android:orientation="horizontal" app:layout_constraintGuide_percent="0.30" android:layout_height="0dp"/>
         <com.google.android.material.card.MaterialCardView android:id="@+id/cardView" style="@style/custom_card_view_style" android:layout_width="match_parent" android:layout_height="0dp" app:cardBackgroundColor="@color/black" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="@+id/guideline4">
-            <androidx.constraintlayout.widget.ConstraintLayout style="@style/custom_card_view_style" android:layout_width="match_parent" android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/custom_card_view_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/custom_card_view_style">
 
                 <EditText
                     android:id="@+id/edit_Password2"
@@ -54,8 +59,8 @@
                     android:drawablePadding="8dp"
                     android:ems="10"
                     android:hint="Repeat the Password"
-                    android:textColorHint="@android:color/white"
                     android:inputType="textPassword"
+                    android:textColorHint="@android:color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -74,14 +79,31 @@
                     android:drawableStart="@drawable/baseline_account_circle_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:textColorHint="@android:color/white"
                     android:hint="@string/email_or_username"
+                    android:textColorHint="@android:color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="VisualLintTextFieldSize" />
-                <EditText android:id="@+id/edit_Password" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginStart="15dp" android:layout_marginTop="36dp" android:layout_marginEnd="15dp" android:background="@drawable/edit_text_background" android:drawableStart="@drawable/baseline_lock_open_24" android:drawablePadding="8dp" android:ems="10" android:hint="Password" android:inputType="textPassword" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/edit_email" android:textColorHint="@android:color/white"
+
+                <EditText
+                    android:id="@+id/edit_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="15dp"
                     android:autofillHints=""
+                    android:background="@drawable/edit_text_background"
+                    android:drawableStart="@drawable/baseline_lock_open_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_email"
                     tools:ignore="HardcodedText,VisualLintTextFieldSize" />
 
                 <Button
