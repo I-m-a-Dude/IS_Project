@@ -17,6 +17,8 @@
 - [x] Add User / Register Design
 
 - [x] Add design
+
+- [x] Sync with the Firebase 
 <br>
 
 
@@ -35,7 +37,7 @@ Firebase by Google
 <h3 align="left">Actual Status: </h3>
 </div><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-- Partea de Log In si Register este facut, din punct de vedere al design-ului(partea in XML, ca partea de Java/Kotlin PUSCA!!!)
+- Partea de Log In si Register este facut, din punct de vedere al design-ului
 <br>
 
-- Si butoanele de jos de pe activity main
+
