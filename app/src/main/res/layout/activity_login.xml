@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C8A2C8"
-    tools:context=".MainActivity" >
+    tools:context=".screen.LogInActivity" >
 
     <TextView
         android:id="@+id/textView"
@@ -56,24 +56,45 @@
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="68dp"
+                android:background="@drawable/chenar"
+                android:drawableLeft="@drawable/baseline_account_circle_24"
                 android:ems="10"
+                android:hint="Email"
                 android:inputType="text"
-                android:text="Username"
+                android:padding="16dp"
+                android:textColorHint="#EDE5E5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+
+            <CheckBox
+                android:id="@+id/RememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Remember Me"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Password_Repeat" />
 
             <EditText
                 android:id="@+id/Password_Repeat"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="56dp"
+                android:background="@drawable/chenar"
+                android:drawableLeft="@drawable/baseline_lock_open_24"
                 android:ems="10"
+                android:hint="Password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
+                android:padding="16dp"
+                android:textColorHint="#E3DADA"
                 app:layout_constraintBottom_toTopOf="@+id/Log_In"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Username"
                 app:layout_constraintVertical_bias="0.0"

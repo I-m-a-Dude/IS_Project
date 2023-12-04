@@ -1,19 +1,15 @@
-package com.toto.proiect_is;
+package com.toto.proiect_is.screen;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.toto.proiect_is.data.RegisterData;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.toto.proiect_is.R;
+import com.toto.proiect_is.data.RegisterData;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -55,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Open the LoginActivity when the "Sign In" button is clicked
-                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, LogInActivity.class);
                 startActivity(intent);
             }
         });
