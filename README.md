@@ -18,7 +18,8 @@
 
 - [x] Add design
 
-- [x] Sync with the Firebase 
+- [x] Sync with the Firebase
+- [x] App Logo
 <br>
 
 
@@ -32,12 +33,5 @@ Java
 <br>
 Firebase by Google
 
-
-
-<h3 align="left">Actual Status: </h3>
-</div><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
-- Partea de Log In si Register este facut, din punct de vedere Front End si Back End si partea de database
-<br>
 
 
