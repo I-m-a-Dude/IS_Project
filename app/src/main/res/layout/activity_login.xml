@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/reg_stil"
-        app:cardBackgroundColor="#0C0C0C"
+        app:cardBackgroundColor="#C8A2C8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider2">
 
