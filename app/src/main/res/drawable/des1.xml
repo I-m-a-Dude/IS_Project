@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- rounded_edittext_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#202020" /> <!-- Transparent background -->
+    <corners android:topLeftRadius="45dp" android:bottomLeftRadius="45dp" android:bottomRightRadius="45dp" android:topRightRadius="45dp" /> <!-- Radius for rounded corners -->
+</shape>
