@@ -37,11 +37,24 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:id="@+id/income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Income"
+        app:layout_constraintBottom_toBottomOf="@+id/divider4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.745"
+        tools:ignore="HardcodedText" />
+
     <View
         android:id="@+id/divider4"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="106dp"
+        android:layout_marginTop="115dp"
         android:background="#FFE3A6D4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +72,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/reg_stil" >
+            android:background="@drawable/reg_stil"
+            tools:ignore="ExtraText">
 
             <Button
                 android:id="@+id/add"
@@ -88,36 +102,58 @@
                 tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cat_am"
-                android:layout_width="150dp"
-                android:layout_height="143dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="200dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="200dp"
-                android:background="@drawable/des1"
+                android:id="@+id/Spent_View"
+                android:layout_width="152dp"
+                android:layout_height="130dp"
+                app:cardBackgroundColor="#131313"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.878"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.375" >
 
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spent" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cheltuit"
-                android:layout_width="150dp"
-                android:layout_height="143dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="200dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="200dp"
-                android:background="@drawable/des1"
+                android:id="@+id/income_view"
+                android:layout_width="127dp"
+                android:layout_height="126dp"
+                app:cardBackgroundColor="#131313"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.091"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.371">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Income" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Circular progress bar indicating money spent -->
+            <!-- Set the initial progress as needed -->
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Text view to display the amount spent -->
+
+            <!-- Set the initial amount as needed -->
+            app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

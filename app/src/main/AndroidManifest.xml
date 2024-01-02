@@ -25,6 +25,7 @@
         <activity android:name=".screen.HomeActivity" />
         <activity android:name=".screen.AddActivity" />
         <activity android:name=".screen.DelActivity" />
+        <activity android:name=".screen.AddIncome" />
     </application>
 
 </manifest>

@@ -27,6 +27,7 @@ public class AddActivity extends AppCompatActivity {
 
     // Views
     private EditText dataEditText, sumaEditText, categorieEditText, descriereEditText;
+    private FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +45,21 @@ public class AddActivity extends AppCompatActivity {
         descriereEditText = findViewById(R.id.Descriere);
         Button addButton = findViewById(R.id.Addbutton);
 
+        floatingActionButton = findViewById(R.id.floatingActionButton);
+
         // Set onClickListener for the "Add" button
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("AddActivity", "Add button clicked");
                 addExpenseToDatabase();
+            }
+        });
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
 

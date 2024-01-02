@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
 
         Button logoutButton = findViewById(R.id.logout);
         Button addButton = findViewById(R.id.add);
+        Button addIncomeButton = findViewById(R.id.income);
         Button deleteButton = findViewById(R.id.delete);
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +52,16 @@ public class HomeActivity extends AppCompatActivity {
                 // Handle Add button click
                 // You can start a new activity or perform any other action as needed
                 Intent intent = new Intent(HomeActivity.this, AddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        addIncomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Handle Add button click
+                // You can start a new activity or perform any other action as needed
+                Intent intent = new Intent(HomeActivity.this, AddIncome.class);
                 startActivity(intent);
             }
         });
