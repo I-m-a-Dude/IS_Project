@@ -36,7 +36,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/chenar"
-                android:drawableLeft="@drawable/baseline_calendar_month_24"
                 android:drawablePadding="0.5dp"
                 android:ems="10"
                 android:hint="Date"

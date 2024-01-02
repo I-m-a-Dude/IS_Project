@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.toto.proiect_is.R;
 import com.toto.proiect_is.screen.HomeActivity;
 
@@ -62,6 +64,11 @@ public class LogInActivity extends AppCompatActivity {
                                     // Redirect to home page
                                     Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
                                     startActivity(intent);
+                                    // Write a message to the database
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    DatabaseReference myRef = database.getReference("message");
+
+                                    myRef.setValue("Hello, World!");
                                     finish(); // Optional: Close the login activity
                                 } else {
                                     // If sign in fails, display a message to the user.

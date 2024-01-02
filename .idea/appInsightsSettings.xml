@@ -9,10 +9,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.toto.proiect_is" />
-                  <option name="mobileSdkAppId" value="1:1057002754486:android:8f33c55f7d504c42fcf117" />
-                  <option name="projectId" value="proiect-is-30c89" />
-                  <option name="projectNumber" value="1057002754486" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

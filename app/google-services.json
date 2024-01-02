@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1057002754486",
-    "project_id": "proiect-is-30c89",
-    "storage_bucket": "proiect-is-30c89.appspot.com"
+    "project_number": "229010810764",
+    "project_id": "extracker-ff2fe",
+    "storage_bucket": "extracker-ff2fe.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1057002754486:android:8f33c55f7d504c42fcf117",
+        "mobilesdk_app_id": "1:229010810764:android:e3e8bffbdb349b442a58a9",
         "android_client_info": {
           "package_name": "com.toto.proiect_is"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB2uX5MQ_MxQGrb0S1e6A9vnyL6OMMajgg"
+          "current_key": "AIzaSyCztdtqsOeZoB9LdUGxEybA8d640rG8mC4"
         }
       ],
       "services": {
