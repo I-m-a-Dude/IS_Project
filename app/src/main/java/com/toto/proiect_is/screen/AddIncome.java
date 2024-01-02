@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,13 +18,15 @@ import com.toto.proiect_is.func.Income;
 
 public class AddIncome extends AppCompatActivity {
 
-    private EditText editTextDate;
     private EditText editTextAmount;
     private Button addButton;
+
+    private TextView textview2;
 
     private FloatingActionButton floatingActionButton;
 
     private DatabaseReference databaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,6 @@ public class AddIncome extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference().child("incomes");
 
         // Initialize UI elements
-        editTextDate = findViewById(R.id.editTextDate);
         editTextAmount = findViewById(R.id.editTextAmount);
         addButton = findViewById(R.id.Addbutton);
 
@@ -45,7 +47,7 @@ public class AddIncome extends AppCompatActivity {
             }
         });
 
-        floatingActionButton = findViewById(R.id.floatingActionButtonincome);
+        floatingActionButton = findViewById(R.id.floatingActionButton);
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,15 +59,14 @@ public class AddIncome extends AppCompatActivity {
     }
 
     private void addIncomeToFirebase() {
-        String month = editTextDate.getText().toString().trim();
         String amount = editTextAmount.getText().toString().trim();
 
-        if (!month.isEmpty() && !amount.isEmpty()) {
+        if (!amount.isEmpty()) {
             // Create a unique key for the new income
             String incomeId = databaseReference.push().getKey();
 
             // Create a new Income object
-            Income income = new Income(month, amount);
+            Income income = new Income(amount);
 
             // Add the income to the database
             databaseReference.child(incomeId).setValue(income).addOnCompleteListener(task -> {
@@ -73,8 +74,9 @@ public class AddIncome extends AppCompatActivity {
                     Toast.makeText(AddIncome.this, "Income added successfully", Toast.LENGTH_SHORT).show();
                     // Optionally, you can add additional actions after successful deletion
                     // Clear the input fields
-                    editTextDate.setText("");
                     editTextAmount.setText("");
+
+
                 } else {
                     Toast.makeText(AddIncome.this, "Failed to add income", Toast.LENGTH_SHORT).show();
                 }
@@ -85,4 +87,5 @@ public class AddIncome extends AppCompatActivity {
         }
 
         }
+
     }

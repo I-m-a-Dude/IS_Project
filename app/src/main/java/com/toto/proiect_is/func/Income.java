@@ -1,36 +1,25 @@
 package com.toto.proiect_is.func;
 
 public class Income {
-    private String month;
-    private String amount;
+    private String income;
 
     // Required default constructor for Firebase
     public Income() {
     }
 
-    public Income( String month, String amount) {
+    public Income( String income) {
 
-        this.month = month;
-        this.amount = amount;
+        this.income = income;
     }
 
     // Getter and setter methods...
 
 
-
-    public String getMonth() {
-        return month;
+    public String getIncome() {
+        return income;
     }
 
-    public void setMonth(String month) {
-        this.month = month;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
+    public void setIncome(String income) {
+        this.income = income;
     }
 }

@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.database.*;
 
@@ -33,6 +34,8 @@ public class HomeActivity extends AppCompatActivity {
         Button addButton = findViewById(R.id.add);
         Button addIncomeButton = findViewById(R.id.income);
         Button deleteButton = findViewById(R.id.delete);
+
+        TextView textview2 = findViewById(R.id.textView2);
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,5 +78,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
