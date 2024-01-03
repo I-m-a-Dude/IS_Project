@@ -60,5 +60,8 @@ public class Expense {
         this.describe = describe;
     }
 
-
+    @Override
+    public String toString() {
+        return "Category: " + category + "\nDate: " + date + "\nSum: " + sum + "\nDescription: " + describe;
+    }
 }

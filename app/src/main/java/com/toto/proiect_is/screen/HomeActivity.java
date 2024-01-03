@@ -30,22 +30,20 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Button logoutButton = findViewById(R.id.logout);
+        Button expenseButton = findViewById(R.id.expense);
         Button addButton = findViewById(R.id.add);
         Button addIncomeButton = findViewById(R.id.income);
         Button deleteButton = findViewById(R.id.delete);
 
         TextView textview2 = findViewById(R.id.textView2);
 
-        logoutButton.setOnClickListener(new View.OnClickListener() {
+        expenseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Handle logout logic
                 // For simplicity, let's assume you want to go back to the login screen
-                Intent intent = new Intent(HomeActivity.this, LogInActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent intent = new Intent(HomeActivity.this, ViewExpenses.class);
                 startActivity(intent);
-                finish();
             }
         });
 
