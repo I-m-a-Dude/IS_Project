@@ -1,7 +1,13 @@
 package com.toto.proiect_is.screen;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -28,6 +34,7 @@ public class ViewExpenses extends AppCompatActivity {
     private ListView expensesListView;
     private List<Expense> expenseList;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +45,8 @@ public class ViewExpenses extends AppCompatActivity {
 
         // Initialize Views
         expensesListView = findViewById(R.id.lista);
+
+
 
         // Initialize Expense List
         expenseList = new ArrayList<>();
@@ -74,4 +83,8 @@ public class ViewExpenses extends AppCompatActivity {
         // Set the adapter to the ListView
         expensesListView.setAdapter(adapter);
     }
+
+
+
+
 }
