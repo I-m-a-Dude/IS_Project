@@ -64,4 +64,8 @@ public class Expense {
     public String toString() {
         return "Category: " + category + "\nDate: " + date + "\nSum: " + sum + "\nDescription: " + describe;
     }
+
+    public double getAmount() {
+        return 0;
+    }
 }
