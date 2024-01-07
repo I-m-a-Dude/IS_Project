@@ -20,6 +20,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,6 +47,8 @@ public class ViewExpenses extends AppCompatActivity {
 
     private Button low_sum, big_sum, early_date, latest_date, category;
 
+    private FloatingActionButton floatingActionButton;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,7 +61,7 @@ public class ViewExpenses extends AppCompatActivity {
         // Initialize Views
         expensesListView = findViewById(R.id.lista);
 
-
+        floatingActionButton = findViewById(R.id.back);
 
         // Initialize Expense List
         expenseList = new ArrayList<>();
@@ -128,7 +131,12 @@ public class ViewExpenses extends AppCompatActivity {
             }
         });
 
-
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
     }
 

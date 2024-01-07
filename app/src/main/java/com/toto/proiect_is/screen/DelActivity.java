@@ -15,11 +15,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.toto.proiect_is.func.ExpenseDeleteObserver;
 
-public class DelActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class DelActivity extends AppCompatActivity implements ExpenseDeleteObserver {
 
     // Firebase Database
     private DatabaseReference databaseReference;
+
+    private List<ExpenseDeleteObserver> observers = new ArrayList<>();
 
     // Views
     private TextView addTxt;
@@ -58,6 +64,18 @@ public class DelActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    public void onExpenseDeletedSuccessfully() {
+        for (ExpenseDeleteObserver observer : observers) {
+            observer.onExpenseDeletedSuccessfully();
+        }
+    }
+
+    public void onExpenseDeleteFailed() {
+        for (ExpenseDeleteObserver observer : observers) {
+            observer.onExpenseDeleteFailed();
+        }
     }
 
     // Method to delete expense from Firebase Realtime Database

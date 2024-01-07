@@ -47,7 +47,7 @@ public class AddIncome extends AppCompatActivity {
             }
         });
 
-        floatingActionButton = findViewById(R.id.floatingActionButton);
+        floatingActionButton = findViewById(R.id.back);
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override

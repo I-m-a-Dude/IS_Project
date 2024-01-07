@@ -18,12 +18,18 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import com.toto.proiect_is.R;
 import com.toto.proiect_is.func.Expense;
+import com.toto.proiect_is.func.ExpenseObserver;
 
-public class AddActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddActivity extends AppCompatActivity implements ExpenseObserver {
 
     // Firebase Database
     private FirebaseDatabase db;
     private DatabaseReference databaseReference;
+
+    private List<ExpenseObserver> observers = new ArrayList<>();
 
     // Views
     private EditText dataEditText, sumaEditText, categorieEditText, descriereEditText;
@@ -45,7 +51,7 @@ public class AddActivity extends AppCompatActivity {
         descriereEditText = findViewById(R.id.Descriere);
         Button addButton = findViewById(R.id.Addbutton);
 
-        floatingActionButton = findViewById(R.id.floatingActionButton);
+        floatingActionButton = findViewById(R.id.back);
 
         // Set onClickListener for the "Add" button
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +70,21 @@ public class AddActivity extends AppCompatActivity {
         });
 
     }
+
+
+    public void onExpenseAddedSuccessfully() {
+        for (ExpenseObserver observer : observers) {
+            observer.onExpenseAddedSuccessfully();
+        }
+    }
+
+    public void onExpenseAddFailed() {
+        for (ExpenseObserver observer : observers) {
+            observer.onExpenseAddFailed();
+        }
+    }
+
+
 
     // Method to add expense to Firebase Realtime Database
     private void addExpenseToDatabase() {
